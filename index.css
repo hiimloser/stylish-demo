@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url("../assets/zed.jpg") no-repeat center top,url("../assets/lunar2022_bg_tile.jpg")no-repeat center top;
+  background-size: cover;
+  background-position-y: var(-100);
+  height: auto;
+  z-index: 1;
+}
+#first {
+  display: fixed;
+}
+/* Title*/
+
+.title {
+  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  /* justify-items: center; */
+}
+
+.title_right {
+  padding: 5px;
+}
+.title_right a {
+  margin: 3px 0 0 5px;
+}
+.title_left {
+  padding: 5px;
+}
+.title_left-list {
+  display: flex;
+  padding: 0px 0px 0 317px;
+}
+.title_left-item {
+  display: flex;
+  list-style: none;
+  padding: 2px 11px;
+}
+.title_left-item_install {
+  background-color: #fff;
+}
+.title_left-item a:hover {
+  color: #fff;
+}
+.item-stall {
+  margin: 0px -3px 0px 4px;
+}
+.title_left ul li a :hover {
+  color: #fff;
+  background-color: aqua;
+}
+.item-login {
+  border-right: 1px solid hsla(0, 0%, 100%, 0.4);
+  padding-right: 7px;
+}
+/* .title_left-item :hover  i {
+  color:red;
+} */
+/* .title :hover a{
+  color:#fff
+} */
+.title a {
+  font-size: 14px;
+  color: #b8b6b4;
+  text-decoration: none;
+  display: block;
+  align-self: end;
+}
+.title_right a:hover {
+  color: #fff;
+}
+/* language */
+.title_left-item ul {
+  list-style: none;
+  text-decoration: none;
+}
+.title_left-item > .title_left-item_sub {
+  position: absolute;
+  background-color: #333;
+  z-index: 10;
+  display: none;
+}
+li:hover ul.title_left-item_sub {
+  display: block;
+}
+.title_left-list li {
+  position: relative;
+}
+.title_left-item_sub {
+  top: 20px;
+  right: -33px;
+  width: 100px;
+  padding: 7px 8px;
+}
+.title_left-item_sub li a {
+  padding: 8px 0px 6px 0px;
+  border-bottom: 1px solid #b8b6b4;
+}
+/* heading */
+#header {
+  background-color: #fff;
+}
+.container {
+  max-width: 960px;
+  margin: 0px auto;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+#logo {
+  padding: 2px 0px;
+}
+#logo img {
+  max-width: 50px;
+  height: auto;
+}
+#title {
+  background-color: #333;
+}
+
+#main-menu {
+  display: flex;
+  list-style: none;
+}
+#main-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 18px 20px;
+}
+#main-menu ul.sub-menu {
+  list-style: none;
+  position: absolute;
+  padding: 15px 0px;
+  width: 200px;
+  top: 39px;
+  z-index: 9;
+}
+#main-menu li {
+  position: relative;
+  background-color: #fff;
+}
+.sub-menu a {
+  /* padding: 8px 20px; */
+  border-bottom: 1px solid #333;
+}
+.sub-menu li:last-child a {
+  border: none;
+}
+/* .sub-menu{
+  display: none;
+} */
+ul#main-menu li > .sub-menu {
+  display: none;
+}
+ul#main-menu li:hover .sub-menu {
+  display: block;
+  animation: Index ease-in 0.3s;
+}
+#main-menu li a:hover {
+  color: #f6402d;
+  background-color: #333;
+}
+@keyframes Index {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#main-menu > li > a:after {
+  content: "";
+  background-color: #f6402d;
+  height: 4px;
+  width: 0%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#main-menu > li > a {
+  position: relative;
+}
+#main-menu > li:hover > a:after {
+  width: 100%;
+}
+.sub-menu a:hover {
+  border-bottom: 1.5px solid red;
+}
+/* body */
+#second {
+  max-width: 940px;
+  height: 36px auto;
+  background: linear-gradient(to right, #646681, #36364c);
+  margin: 31px 0px 0px 205px;
+  display: flex;
+  z-index: 8;
+}
+#store-nav ul {
+  z-index: 8;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+#store-nav ul li a {
+  text-decoration: none;
+  color: #d9d9d9;
+  display: block;
+  padding: 9px 36px;
+  display: block;
+}
+.store-nav_search {
+  padding: 7px 0px 0px 11px;
+}
+.store-nav_search input {
+  height: 19px;
+}
+.store-nav_search button {
+  font-size: 15px;
+}
+#store-nav ul li:hover {
+  background: linear-gradient(to right, #36364c, #646681);
+  color: white;
+  position: relative;
+}
+.store-nav_submenu {
+  background-color: black;
+}
+#store-nav ul li > .store-nav_submenu {
+  display: none;
+  position: absolute;
+}
+#store-nav ul li:hover .store-nav_submenu {
+  text-decoration: none;
+  display: block;
+  transition: 0.6s;
+}
+.store-nav_submenu {
+  box-shadow: 0 0 12px #000000;
+}
+.store-nav_submenu li {
+  font-size: 14px;
+  width: 247px;
+}
+.store-nav_submenu li a:hover {
+  border-bottom: 1px solid white;
+  background-color: #333;
+}
+/* product */
+#intro {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 328px;
+}
+.product-item_face img {
+  max-width: 100%;
+  height: auto;
+}
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  overflow: hidden;
+}
+.product li {
+  flex-basis: 25%;
+  position: relative;
+}
+.product-price {
+  line-height: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+
+  /* transition: bottom 0.6s; */
+}
+.product-price a {
+  text-decoration: none;
+  color: #fff;
+}
+.buynow-content {
+  font-weight: bold;
+  font-size: 20px;
+}
+.buynow-content a {
+  text-decoration: none;
+  color: #fff;
+}
+.buynow-content span {
+  color: #959595;
+}
+.product-buynow {
+  position: absolute;
+  background: linear-gradient( 90deg, rgba(33, 162, 255, 0.1) 1.89%,rgba(50, 50, 51, 0) 50%),linear-gradient(180deg, #575860 11.6%, #3a4852 54.73%, #2c2d34 100%);
+  margin-top: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.4s ease-in-out;
+  padding: 10px 0;
+  display: block;
+}
+.buynow-content {
+  padding-bottom: 13px;
+  margin-left: 18px;
+  margin-bottom: 38px;
+}
+.buynow-add {
+  padding: 0px 10px 0 40px;
+}
+.buynow-add button {
+  padding: 4px;
+}
+.content-name span {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.buynow-name {
+  font-size: 12px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+}
+.product li:hover .product-buynow {
+  margin-top: -184px;
+}
+.buynow-name a:hover {
+  text-decoration: underline;
+}
+.trans {
+  text-transform: uppercase;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+}
+.product li:hover .product-price {
+  transition: bottom 0.6s;
+  bottom: 13%;
+}
+.buynow-content_bottom{
+  padding-top: 15px;
+}
