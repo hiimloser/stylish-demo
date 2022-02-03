@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background: url("../assets/zed.jpg") no-repeat center top,url("../assets/lunar2022_bg_tile.jpg")no-repeat center top;
+  background: url("./assets/zed.jpg") no-repeat center top,url("./assets/lunar2022_bg_tile.jpg")no-repeat center top;
   background-size: cover;
   background-position-y: var(-100);
   height: auto;
